@@ -1,4 +1,4 @@
-version: '3.2'
+version: '4.1.0'
 
 volumes:
   cloud-postgres:
@@ -18,3 +18,9 @@ services:
       interval: 5s
       timeout: 1s
       retries: 2
+
+
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
